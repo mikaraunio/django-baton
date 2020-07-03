@@ -54,7 +54,7 @@
       }
 
       &.entry-collapsed {
-        + fieldset {
+        ~ fieldset {
           display: none !important;
         }
 
