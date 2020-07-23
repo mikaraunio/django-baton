@@ -80,7 +80,7 @@
         }
       }
 
-      + fieldset {
+      ~ fieldset {
         display: none !important;
       }
 
@@ -91,7 +91,7 @@
           }
         }
 
-        + fieldset {
+        ~ fieldset {
           display: block !important;
         }
       }
