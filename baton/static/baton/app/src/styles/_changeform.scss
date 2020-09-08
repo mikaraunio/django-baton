@@ -67,7 +67,7 @@
     }
   }
 
-  .last-related, // do not collapse the newly added row
+  .collapse-entry .last-related, // do not collapse the newly added row
   .expand-first .inline-related[id$="-0"] {
     h3 {
       .entry-collapse-toggler {
@@ -131,12 +131,17 @@
 }
 
 .tab-content {
-  padding-top: 1rem;
+  // padding-top: 1rem;
 }
 
 .baton-form-include {
   display: block;
   min-width: 100%;
+}
+
+.baton-form-include-right {
+  display: inline !important;
+  min-width: auto !important;
 }
 
 .change-form #content-main>form .form-row>div.baton-form-include {

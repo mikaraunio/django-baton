@@ -36,6 +36,7 @@ class NewsAdmin(admin.ModelAdmin):
     list_display = ('title', 'date', 'category', 'published', )
     list_filter = (TitleFilter, )
     inlines = [AttachmentsInline, VideosInline]
+    date_hierarchy = 'date'
 
     fieldsets = (
         ('Dates', {
@@ -45,7 +46,7 @@ class NewsAdmin(admin.ModelAdmin):
 
         }),
         ('Main', {
-            'fields': ('category', 'title', 'image', 'content', ),
+            'fields': ('category', 'title', 'link', 'image', 'content', ),
             'classes': ('tab-fs-main', ),
             'description': 'This is a description text'
 
@@ -71,5 +72,6 @@ class NewsAdmin(admin.ModelAdmin):
 
     baton_form_includes = [
         ('news/admin_datetime_include.html', 'datetime', 'top', ),
-        ('news/admin_content_include.html', 'content', 'above', )
+        ('news/admin_content_include.html', 'content', 'above', ),
+        ('news/admin_title_include.html', 'title', 'right', ),
     ]

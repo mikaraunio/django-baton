@@ -39,6 +39,12 @@
       }
     }
 
+    .newline {
+      display: block;
+      height: .5rem;
+      width: 100%;
+    }
+
     > div {
       align-items: flex-start;
       display: flex;
@@ -174,25 +180,25 @@
           width: auto;
 
           .selector-add {
-            background: url('/static/admin/img/selector-icons.svg') 0 -32px no-repeat; // 46
+            background: url('../img/selector-icons.svg') 0 -32px no-repeat; // 46
 
             &.active {
-              background: url('/static/admin/img/selector-icons.svg') 0 -48px no-repeat; // 46
+              background: url('../img/selector-icons.svg') 0 -48px no-repeat; // 46
             }
           }
 
           .selector-remove {
-            background: url('/static/admin/img/selector-icons.svg') 0 0 no-repeat; // 46
+            background: url('../img/selector-icons.svg') 0 0 no-repeat; // 46
 
             &.active {
-              background: url('/static/admin/img/selector-icons.svg') 0 -16px no-repeat; // 46
+              background: url('../img/selector-icons.svg') 0 -16px no-repeat; // 46
             }
           }
         }
       }
 
       .help-icon {
-        background: url('/static/admin/img/icon-unknown.svg') 0 0 no-repeat;
+        background: url('../img/icon-unknown.svg') 0 0 no-repeat;
         cursor: help;
         display: inline-block;
         height: 13px;
@@ -217,7 +223,7 @@
       }
 
       .search-label-icon {
-        background: url('/static/admin/img/search.svg') 0 0 no-repeat;
+        background: url('../img/search.svg') 0 0 no-repeat;
         cursor: help;
         display: inline-block;
         height: 18px;
@@ -287,11 +293,11 @@
       }
 
       .selector-add {
-        background: url('/static/admin/img/selector-icons.svg') 0 -112px no-repeat;
+        background: url('../img/selector-icons.svg') 0 -112px no-repeat;
       }
 
       .selector-remove {
-        background: url('/static/admin/img/selector-icons.svg') 0 -80px no-repeat;
+        background: url('../img/selector-icons.svg') 0 -80px no-repeat;
       }
 
       .selector-add,
@@ -348,6 +354,7 @@
   }
 
   input[type=text],
+  input[type=url],
   input[type=number],
   input[type=email],
   input[type=date],
@@ -357,6 +364,10 @@
     @include media-breakpoint-up(md) {
       width: auto;
     }
+  }
+
+  input[type=url] {
+    display: inline-block !important;
   }
 
   input[type=text][size] {
@@ -547,7 +558,7 @@
 
         &::before {
           @extend %font-awesome;
-          content: '\f2ed';
+          content: '\f1f8';
         }
       }
     }

@@ -1,11 +1,19 @@
 // scss-lint:disable ImportantRule IdSelector SelectorDepth NestingDepth PlaceholderInExtend
 body.login {
   padding-top: 1px;
+
+  #header #branding {
+    margin: auto !important;
+  }
 }
 
 .login {
   #content {
     padding-top: 1px !important;
+  }
+
+  #content-main + br.clear {
+    display: none;
   }
 
   #container {
@@ -30,6 +38,11 @@ body.login {
 
     form {
       padding: 1rem;
+
+      .input-group-text {
+        justify-content: center;
+        width: 42px;
+      }
     }
 
     input[type='text'],
